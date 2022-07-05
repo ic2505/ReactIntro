@@ -14,12 +14,13 @@ class App extends Component {
   // Since app owns state, it can change its variables.
 
   onSearchChange = (event) => { // When creating your own method on a state use following syntax to make sure that the [this] value is according to where its created.
-    console.log(event.target.value);
+    this.setState({ searchfield: event.target.value })
     const filteredRobots = this.state.robots.filter((robot) => {
-      return robot.name
+        return robot.name
         .toLowerCase()
         .includes(this.state.searchfield.toLowerCase());
     });
+    console.log(filteredRobots);
   }
 
   render() {

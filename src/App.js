@@ -5,6 +5,7 @@ import { robots } from "./robots";
 
 class App extends Component {
   constructor() {
+    super() // calls the constructor of the component, needed to use this function. 
     this.state = {
       robots: robots,
       searchfield: "",
@@ -16,7 +17,7 @@ class App extends Component {
       <div className="tc">
         <h1>RoboFriends</h1>
         <SearchBox />
-        <CardList robots={robots} />;
+        <CardList robots={this.state.robots} />; 
       </div>
     );
   }

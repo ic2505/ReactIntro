@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "SEGA LOGO FONT";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SEGA LOGO FONT"), url("SEGA.woff") format("woff");
+}
+
+h1 {
+    font-family: "SEGA LOGO FONT";
+    font-weight: 200;
+    color: #0ccac4;
+}
+
+/* To apply a font to a text, 
+(1) download the @font-face file for the font (in this case https://www.cufonfonts.com/font/sega-logo-font#google_vignette). 
+(2) Create a .css file for the .js file where the text lives. 
+(3) Copy paste the @font-face into .css file. 
+(4) Add the font .wolff file into your folder. 
+(5) declare font family for the text
+(6) import .css in .js file  */

@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "tachyons";
+import "tachyons";
 // import { robots } from "./robots"; // deconstructing variable with {}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

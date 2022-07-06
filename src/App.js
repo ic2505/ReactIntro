@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import CardList from "./CardList";
 import SearchBox from "./SearchBox";
-import { robots } from "./robots";
+import Scroll from "./Scroll";
 import "./App.css";
 
 class App extends Component {
@@ -34,15 +34,22 @@ class App extends Component {
         .toLowerCase()
         .includes(this.state.searchfield.toLowerCase());
     });
+
+    if (this.state.robots.length === 0) {
+      return <h1 className="myLoader">Loading</h1>;
+    } else {
+      return (
+        <div className="tc">
+          <h1 className="f1">RoboFriends</h1>
+          <SearchBox searchChange={this.onSearchChange} />
+          <Scroll>
+            <CardList robots={filteredRobots} />; 
+          </Scroll>
+        </div>
+      );
+    }
     // console.log(filteredRobots);
     // console.log("render");
-    return (
-      <div className="tc">
-        <h1 className="f1">RoboFriends</h1>
-        <SearchBox searchChange={this.onSearchChange} />
-        <CardList robots={filteredRobots} />;
-      </div>
-    );
   }
 }
 

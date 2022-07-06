@@ -11,6 +11,10 @@ h1 {
     color: #0ccac4;
 }
 
+.myLoader {
+  font-family: "Arial"
+}
+
 /* To apply a font to a text, 
 (1) download the @font-face file for the font (in this case https://www.cufonfonts.com/font/sega-logo-font#google_vignette). 
 (2) Create a .css file for the .js file where the text lives. 
